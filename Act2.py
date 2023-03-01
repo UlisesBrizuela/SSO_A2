@@ -9,10 +9,8 @@ shutil.copytree(ruta_original, ruta_copia)
 for ruta, directorios, archivos in os.walk(ruta_copia):
     for archivo in archivos:
         ruta_archivo = os.path.join(ruta, archivo)
-        ruta_copia = ruta_archivo + '_copia'
-        shutil.copy(ruta_archivo, ruta_copia)
-
-        with open(ruta_copia, 'r+') as Archivo:
+        
+        with open(ruta_archivo, 'r+') as Archivo:
             nuevo_texto = ""
             for linea in Archivo:
                 for palabra in linea.split(" "):
