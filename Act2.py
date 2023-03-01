@@ -2,7 +2,11 @@ import os
 import shutil
 import random
 
-for ruta, directorios, archivos in os.walk('D:/Drive/SISTEMAS OPERATIVOS/Seminario Sistemas Operativos/Act2/carpeta'):
+ruta_original = "./carpeta"
+ruta_copia = ruta_original + "_copia"
+shutil.copytree(ruta_original, ruta_copia)
+
+for ruta, directorios, archivos in os.walk(ruta_copia):
     for archivo in archivos:
         ruta_archivo = os.path.join(ruta, archivo)
         ruta_copia = ruta_archivo + '_copia'
