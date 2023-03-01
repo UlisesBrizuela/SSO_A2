@@ -1,3 +1,6 @@
+#Actividad 2 - Seminario de solucion de problemas de sistemas operativos
+#Brizuela Arias Ulises Israel
+
 import os
 import shutil
 import random
